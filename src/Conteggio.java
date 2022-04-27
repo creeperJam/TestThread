@@ -4,13 +4,17 @@ public class Conteggio implements Runnable{
 	private int b;
 	
 	
+	public Conteggio(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+	
 	@Override
-	public void run() {		
-		
-		
-		while (a <= b) {
-			System.out.println("Conteggio: " + a);
-			a++;
+	public void run() {
+		int val = a;
+		while (val <= b) {
+			System.out.println("Conteggio: " + val);
+			val++;
 			
 			try {
 				Thread.sleep(500);
@@ -19,6 +23,8 @@ public class Conteggio implements Runnable{
 				e.printStackTrace();
 			}
 		}
+		
+		System.out.println("Fine stampa dei valori tra " + a + " e " + b + ", compresi.");
 	}
 	
 }

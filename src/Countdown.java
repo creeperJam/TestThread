@@ -19,7 +19,7 @@ public class Countdown implements Runnable {
 				e.printStackTrace();
 			}
 		}
-		System.out.println("Countdown arrivato a 0.");
+		System.out.println("Tempo rimanente: 0\n" + "Countdown terminato.");
 	}
 
 }
